@@ -34,6 +34,12 @@ header img {
     height: 20rem;
 }
 
+.box {
+    border-radius: 25px;
+    border-style: inset;
+    border-color: gold;
+}
+
 main {
     margin: 3rem;
 }
