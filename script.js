@@ -21,7 +21,7 @@ brlInput.addEventListener("blur", () => {
 usdInput.value = "0,00"
 convert("usd-to-brl")
 
-function formatCurrency(value){
+function formatCurrency(value) {
     // Ajusta o valor
     let fixedValue = fixValue(value)
     // utilizar a função formatar
@@ -34,18 +34,18 @@ function formatCurrency(value){
     return formatter.format(fixedValue)
 }
 
-function fixValue (value){
+function fixValue(value) {
     let fixedValue = value.replace(",", ".")
     let floatValue = parseFloat(fixedValue)
-    if(floatValue == NaN){
+    if (floatValue == NaN) {
         floatValue = 0
     }
     return floatValue
 }
 
 
-function convert(type){
-    if(type == "usd-to-brl") {
+function convert(type) {
+    if (type == "usd-to-brl") {
         // ajustar o valor
         let fixedValue = fixValue(usdInput.value)
         // converter o valor
@@ -54,7 +54,7 @@ function convert(type){
         // mostrar no campo de real 
         brlInput.value = formatCurrency(result)
     }
-    if(type == "brl-to-usd") {
+    if (type == "brl-to-usd") {
         // ajustar o valor
         let fixedValue = fixValue(brlInput.value)
         // converter o valor
@@ -64,3 +64,4 @@ function convert(type){
         usdInput.value = formatCurrency(result)
     }
 }
+
